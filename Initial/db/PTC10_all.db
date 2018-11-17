@@ -1,0 +1,1818 @@
+
+record(bo, "HAI:tc1:outputEnable") {
+  field(DTYP, "stream")
+  #field(PINI, "YES")
+  field(DESC, "Output enable")
+  field(OUT,  "@PTC10.proto setOutputEnable() PTC_ETH 0")
+  field(ZNAM, "Off")
+  field(ONAM, "On")
+  field(VAL,  "1")
+  field(FLNK, "HAI:tc1:outputEnable_RBV")
+}
+
+record(bi, "HAI:tc1:outputEnable_RBV") {
+  field(DTYP, "stream")
+  field(PINI, "YES")
+  field(DESC, "Output enable")
+  field(INP,  "@PTC10.proto getOutputEnable() PTC_ETH 0")
+  field(ZNAM, "Off")
+  field(ONAM, "On")
+}
+
+# Database file for one channel of the SRS PTC10 Temperature Controller
+
+record(stringin, "HAI:tc1:2A:name_RBV") {
+  field(DTYP, "stream")
+  field(PINI, "YES")
+  field(DESC, "2A name rbv")
+  field(INP,  "@PTC10.proto getName(2A) PTC_ETH 0")
+}
+
+record(ai, "HAI:tc1:2A:temperature") {
+  field(DTYP, "stream")
+  field(DESC, "2A temperature")
+  field(INP,  "@PTC10.proto getOutputLevel(2A) PTC_ETH 0")
+  field(EGU,  "C")
+  field(PREC, "3")
+}
+
+# Database file for one channel of the SRS PTC10 Temperature Controller
+
+record(stringin, "HAI:tc1:2B:name_RBV") {
+  field(DTYP, "stream")
+  field(PINI, "YES")
+  field(DESC, "2B name rbv")
+  field(INP,  "@PTC10.proto getName(2B) PTC_ETH 0")
+}
+
+record(ai, "HAI:tc1:2B:temperature") {
+  field(DTYP, "stream")
+  field(DESC, "2B temperature")
+  field(INP,  "@PTC10.proto getOutputLevel(2B) PTC_ETH 0")
+  field(EGU,  "C")
+  field(PREC, "3")
+}
+
+# Database file for one channel of the SRS PTC10 Temperature Controller
+
+record(stringin, "HAI:tc1:2C:name_RBV") {
+  field(DTYP, "stream")
+  field(PINI, "YES")
+  field(DESC, "2C name rbv")
+  field(INP,  "@PTC10.proto getName(2C) PTC_ETH 0")
+}
+
+record(ai, "HAI:tc1:2C:temperature") {
+  field(DTYP, "stream")
+  field(DESC, "2C temperature")
+  field(INP,  "@PTC10.proto getOutputLevel(2C) PTC_ETH 0")
+  field(EGU,  "C")
+  field(PREC, "3")
+}
+
+# Database file for one channel of the SRS PTC10 Temperature Controller
+
+record(stringin, "HAI:tc1:2D:name_RBV") {
+  field(DTYP, "stream")
+  field(PINI, "YES")
+  field(DESC, "2D name rbv")
+  field(INP,  "@PTC10.proto getName(2D) PTC_ETH 0")
+}
+
+record(ai, "HAI:tc1:2D:temperature") {
+  field(DTYP, "stream")
+  field(DESC, "2D temperature")
+  field(INP,  "@PTC10.proto getOutputLevel(2D) PTC_ETH 0")
+  field(EGU,  "C")
+  field(PREC, "3")
+}
+
+# Database file for one channel of the SRS PTC10 Temperature Controller
+
+record(stringin, "HAI:tc1:ColdJ2:name_RBV") {
+  field(DTYP, "stream")
+  field(PINI, "YES")
+  field(DESC, "ColdJ2 name rbv")
+  field(INP,  "@PTC10.proto getName(ColdJ2) PTC_ETH 0")
+}
+
+record(ai, "HAI:tc1:ColdJ2:temperature") {
+  field(DTYP, "stream")
+  field(DESC, "ColdJ2 temperature")
+  field(INP,  "@PTC10.proto getOutputLevel(ColdJ2) PTC_ETH 0")
+  field(EGU,  "C")
+  field(PREC, "3")
+}
+
+# Database file for one channel of the SRS PTC10 Temperature Controller
+
+record(stringin, "HAI:tc1:5A:name_RBV") {
+  field(DTYP, "stream")
+  field(PINI, "YES")
+  field(DESC, "5A name rbv")
+  field(INP,  "@PTC10.proto getName(5A) PTC_ETH 0")
+}
+
+record(ai, "HAI:tc1:5A:voltage_RBV")
+{
+  field(DTYP, "stream")
+  field(DESC, "5A voltage")
+  field(INP,  "@PTC10.proto getOutputLevel(5A) PTC_ETH 0")
+  field(EGU,  "V")
+  field(PREC, "3")
+}
+
+# TODO: add some records to force RBV updates when ioType_RBV changes
+
+record(mbbi, "HAI:tc1:5A:ioType_RBV")
+{
+  field(DTYP, "stream")
+  field(PINI, "YES")
+  field(DESC, "5A IO type rbv")
+  field(INP,  "@PTC10.proto getIOtype(5A) PTC_ETH 0")
+  field(ZRVL, "0")
+  field(ZRST, "Input")
+  field(ONVL, "1")
+  field(ONST, "Set out")
+  field(TWVL, "2")
+  field(TWST, "Meas out")
+}
+
+record(mbbo, "HAI:tc1:5A:ioType")
+{
+  field(DTYP, "stream")
+  #field(PINI, "YES")
+  field(DESC, "5A IO type")
+  field(OUT,  "@PTC10.proto setIOtype(5A) PTC_ETH 0")
+  field(ZRVL, "0")
+  field(ZRST, "Input")
+  field(ONVL, "1")
+  field(ONST, "Set out")
+  field(TWVL, "2")
+  field(TWST, "Meas out")
+  field(FLNK, "HAI:tc1:5A:ioType_RBV")
+}
+
+record(bo, "HAI:tc1:5A:off")
+{
+  field(DTYP, "stream")
+  field(PINI, "NO")
+  field(DESC, "Turn 5A off")
+  field(OUT,  "@PTC10.proto setOff(5A) PTC_ETH 0")
+  field(ZNAM, "Done")
+  field(ONAM, "Off")
+  field(SDIS, "HAI:tc1:5A:ioType_RBV")
+  field(DISV, "0")
+  field(FLNK, "HAI:tc1:5A:pid:mode_RBV")
+}
+
+record(ai, "HAI:tc1:5A:lowLimit_RBV") {
+  field(DTYP, "stream")
+  field(PINI, "YES")
+  field(DESC, "5A Low limit rbv")
+  field(INP,  "@PTC10.proto getLowLimit(5A) PTC_ETH 0")
+  field(EGU,  "V")
+  field(SDIS, "HAI:tc1:5A:ioType_RBV")
+  field(DISV, "0")
+  field(PREC, "3")
+}
+
+record(ao, "HAI:tc1:5A:lowLimit") {
+  field(DTYP, "stream")
+  field(DESC, "5A Low limit")
+  field(OUT,  "@PTC10.proto setLowLimit(5A) PTC_ETH 0")
+  field(EGU,  "V")
+  field(SDIS, "HAI:tc1:5A:ioType_RBV")
+  field(DISV, "0")
+  field(FLNK, "HAI:tc1:5A:lowLimit_RBV")
+  field(PREC, "3")
+}
+
+record(ai, "HAI:tc1:5A:highLimit_RBV") {
+  field(DTYP, "stream")
+  field(PINI, "YES")
+  field(DESC, "5A High limit rbv")
+  field(INP,  "@PTC10.proto getHighLimit(5A) PTC_ETH 0")
+  field(EGU,  "V")
+  field(SDIS, "HAI:tc1:5A:ioType_RBV")
+  field(DISV, "0")
+  field(PREC, "3")
+}
+
+record(ao, "HAI:tc1:5A:highLimit") {
+  field(DTYP, "stream")
+  field(DESC, "5A High limit")
+  field(OUT,  "@PTC10.proto setHighLimit(5A) PTC_ETH 0")
+  field(EGU,  "V")
+  field(SDIS, "HAI:tc1:5A:ioType_RBV")
+  field(DISV, "0")
+  field(FLNK, "HAI:tc1:5A:highLimit_RBV")
+  field(PREC, "3")
+}
+
+record(ai, "HAI:tc1:5A:setPoint_RBV") {
+  field(DTYP, "stream")
+  field(PINI, "YES")
+  field(DESC, "5A Set Point rbv")
+  field(INP,  "@PTC10.proto getSetpoint(5A) PTC_ETH 0")
+  field(EGU,  "C")
+  field(SDIS, "HAI:tc1:5A:ioType_RBV")
+  field(DISV, "0")
+  field(PREC, "3")
+}
+
+record(ao, "HAI:tc1:5A:setPoint") {
+  field(DTYP, "stream")
+  field(DESC, "5A Set Point")
+  field(OUT,  "@PTC10.proto setSetpoint(5A) PTC_ETH 0")
+  field(EGU,  "C")
+  field(SDIS, "HAI:tc1:5A:ioType_RBV")
+  field(DISV, "0")
+  field(FLNK, "HAI:tc1:5A:setPoint_RBV")
+  field(PREC, "3")
+}
+
+record(ai, "HAI:tc1:5A:rampRate_RBV") {
+  field(DTYP, "stream")
+  field(PINI, "YES")
+  field(DESC, "5A Ramp Rate rbv")
+  field(INP,  "@PTC10.proto getRampRate(5A) PTC_ETH 0")
+  field(EGU,  "C/s")
+  field(SDIS, "HAI:tc1:5A:ioType_RBV")
+  field(DISV, "0")
+  field(PREC, "3")
+}
+
+record(ao, "HAI:tc1:5A:rampRate") {
+  field(DTYP, "stream")
+  field(DESC, "5A Ramp Rate")
+  field(OUT,  "@PTC10.proto setRampRate(5A) PTC_ETH 0")
+  field(EGU,  "C/s")
+  field(SDIS, "HAI:tc1:5A:ioType_RBV")
+  field(DISV, "0")
+  field(FLNK, "HAI:tc1:5A:rampRate_RBV")
+  field(PREC, "3")
+}
+
+record(ai, "HAI:tc1:5A:rampTemp_RBV") {
+  field(DTYP, "stream")
+  field(PINI, "YES")
+  field(DESC, "5A Ramp Temp rbv")
+  field(INP,  "@PTC10.proto getRampTemp(5A) PTC_ETH 0")
+  field(EGU,  "C")
+  field(SDIS, "HAI:tc1:5A:ioType_RBV")
+  field(DISV, "0")
+  field(PREC, "3")
+}
+
+record(ai, "HAI:tc1:5A:pid:P_RBV") {
+  field(DTYP, "stream")
+  field(PINI, "YES")
+  field(DESC, "5A PID P gain rbv")
+  field(INP,  "@PTC10.proto getPidP(5A) PTC_ETH 0")
+  field(SDIS, "HAI:tc1:5A:ioType_RBV")
+  field(DISV, "0")
+  field(PREC, "4")
+}
+
+record(ao, "HAI:tc1:5A:pid:P") {
+  field(DTYP, "stream")
+  field(DESC, "5A PID P gain")
+  field(OUT,  "@PTC10.proto setPidP(5A) PTC_ETH 0")
+  field(SDIS, "HAI:tc1:5A:ioType_RBV")
+  field(DISV, "0")
+  field(FLNK, "HAI:tc1:5A:pid:P_RBV")
+  field(PREC, "4")
+}
+
+record(ai, "HAI:tc1:5A:pid:I_RBV") {
+  field(DTYP, "stream")
+  field(PINI, "YES")
+  field(DESC, "5A PID I gain rbv")
+  field(INP,  "@PTC10.proto getPidI(5A) PTC_ETH 0")
+  field(SDIS, "HAI:tc1:5A:ioType_RBV")
+  field(DISV, "0")
+  field(PREC, "4")
+}
+
+record(ao, "HAI:tc1:5A:pid:I") {
+  field(DTYP, "stream")
+  field(DESC, "5A PID I gain")
+  field(OUT,  "@PTC10.proto setPidI(5A) PTC_ETH 0")
+  field(SDIS, "HAI:tc1:5A:ioType_RBV")
+  field(DISV, "0")
+  field(FLNK, "HAI:tc1:5A:pid:I_RBV")
+  field(PREC, "4")
+}
+
+record(ai, "HAI:tc1:5A:pid:D_RBV") {
+  field(DTYP, "stream")
+  field(PINI, "YES")
+  field(DESC, "5A PID D gain rbv")
+  field(INP,  "@PTC10.proto getPidD(5A) PTC_ETH 0")
+  field(SDIS, "HAI:tc1:5A:ioType_RBV")
+  field(DISV, "0")
+  field(PREC, "4")
+}
+
+record(ao, "HAI:tc1:5A:pid:D") {
+  field(DTYP, "stream")
+  field(DESC, "5A PID D gain")
+  field(OUT,  "@PTC10.proto setPidD(5A) PTC_ETH 0")
+  field(SDIS, "HAI:tc1:5A:ioType_RBV")
+  field(DISV, "0")
+  field(FLNK, "HAI:tc1:5A:pid:D_RBV")
+  field(PREC, "4")
+}
+
+record(stringin, "HAI:tc1:5A:pid:input_RBV") {
+  field(DTYP, "stream")
+  field(PINI, "YES")
+  field(DESC, "5A PID input rbv")
+  field(INP,  "@PTC10.proto getPidInput(5A) PTC_ETH 0")
+  field(SDIS, "HAI:tc1:5A:ioType_RBV")
+  field(DISV, "0")
+}
+
+record(stringout, "HAI:tc1:5A:pid:input") {
+  field(DTYP, "stream")
+  field(DESC, "5A PID input")
+  field(OUT,  "@PTC10.proto setPidInput(5A) PTC_ETH 0")
+  field(SDIS, "HAI:tc1:5A:ioType_RBV")
+  field(DISV, "0")
+  field(FLNK, "HAI:tc1:5A:pid:input_RBV")
+}
+
+record(bi, "HAI:tc1:5A:pid:mode_RBV")
+{
+  field(DTYP, "stream")
+  field(PINI, "YES")
+  field(DESC, "5A PID mode rbv")
+  field(INP,  "@PTC10.proto getPidMode(5A) PTC_ETH 0")
+  field(ZNAM, "Off")
+  field(ONAM, "On")
+  field(SDIS, "HAI:tc1:5A:ioType_RBV")
+  field(DISV, "0")
+}
+
+record(bo, "HAI:tc1:5A:pid:mode")
+{
+  field(DTYP, "stream")
+  #field(PINI, "YES")
+  field(DESC, "5A PID mode")
+  field(OUT,  "@PTC10.proto setPidMode(5A) PTC_ETH 0")
+  field(ZNAM, "Off")
+  field(ONAM, "On")
+  field(VAL,  "0")
+  field(SDIS, "HAI:tc1:5A:ioType_RBV")
+  field(DISV, "0")
+  field(FLNK, "HAI:tc1:5A:pid:mode_RBV")
+}
+
+record(ai, "HAI:tc1:5A:tune:lag_RBV") {
+  field(DTYP, "stream")
+  field(PINI, "YES")
+  field(DESC, "5A Tune lag")
+  field(INP,  "@PTC10.proto getTuneLag(5A) PTC_ETH 0")
+  field(SDIS, "HAI:tc1:5A:ioType_RBV")
+  field(DISV, "0")
+  field(PREC, "0")
+  field(EGU,  "seconds")
+}
+
+record(ao, "HAI:tc1:5A:tune:lag") {
+  field(DTYP, "stream")
+  field(DESC, "5A Tune lag")
+  field(OUT,  "@PTC10.proto setTuneLag(5A) PTC_ETH 0")
+  field(SDIS, "HAI:tc1:5A:ioType_RBV")
+  field(DISV, "0")
+  field(FLNK, "HAI:tc1:5A:tune:lag_RBV")
+  field(VAL,  "30")
+  field(PREC, "0")
+  field(EGU,  "seconds")
+}
+
+# 
+record(ai, "HAI:tc1:5A:tune:step_RBV") {
+  field(DTYP, "stream")
+  field(PINI, "YES")
+  field(DESC, "5A Tune step")
+  field(INP,  "@PTC10.proto getTuneStep(5A) PTC_ETH 0")
+  field(SDIS, "HAI:tc1:5A:ioType_RBV")
+  field(DISV, "0")
+  field(PREC, "3")
+  field(EGU,  "volts")
+}
+
+record(ao, "HAI:tc1:5A:tune:step") {
+  field(DTYP, "stream")
+  field(DESC, "5A Tune step")
+  field(OUT,  "@PTC10.proto setTuneStep(5A) PTC_ETH 0")
+  field(SDIS, "HAI:tc1:5A:ioType_RBV")
+  field(DISV, "0")
+  field(FLNK, "HAI:tc1:5A:tune:step_RBV")
+  field(PREC, "3")
+  field(VAL,  "0.5")
+  field(EGU,  "volts")
+}
+
+record(mbbi, "HAI:tc1:5A:tune:mode_RBV")
+{
+  field(DTYP, "stream")
+  field(PINI, "YES")
+  field(DESC, "5A Tune mode rbv")
+  field(INP,  "@PTC10.proto getTuneMode(5A) PTC_ETH 0")
+  field(SDIS, "HAI:tc1:5A:ioType_RBV")
+  field(DISV, "0")
+  field(ZRVL, "0")
+  field(ZRST, "Off")
+  field(ONVL, "1")
+  field(ONST, "Auto")
+  field(TWVL, "2")
+  field(TWST, "Step")
+  field(THVL, "3")
+  field(THST, "Relay")
+}
+
+record(mbbo, "HAI:tc1:5A:tune:mode")
+{
+  field(DTYP, "stream")
+  #field(PINI, "YES")
+  field(DESC, "5A Tune mode")
+  field(OUT,  "@PTC10.proto setTuneMode(5A) PTC_ETH 0")
+  field(SDIS, "HAI:tc1:5A:ioType_RBV")
+  field(DISV, "0")
+  field(ZRVL, "0")
+  field(ZRST, "Off")
+  field(ONVL, "1")
+  field(ONST, "Auto")
+  field(TWVL, "2")
+  field(TWST, "Step")
+  field(THVL, "3")
+  field(THST, "Relay")
+  field(VAL,  "0")
+  field(FLNK, "HAI:tc1:5A:tune:mode_RBV")
+}
+
+record(mbbi, "HAI:tc1:5A:tune:type_RBV")
+{
+  field(DTYP, "stream")
+  field(PINI, "YES")
+  field(DESC, "5A Tune type rbv")
+  field(INP,  "@PTC10.proto getTuneType(5A) PTC_ETH 0")
+  field(SDIS, "HAI:tc1:5A:ioType_RBV")
+  field(DISV, "0")
+  field(ZRVL, "0")
+  field(ZRST, "Cons")
+  field(ONVL, "1")
+  field(ONST, "Moderate")
+  field(TWVL, "2")
+  field(TWST, "Aggr")
+  field(THVL, "3")
+  field(THST, "Auto")
+}
+
+record(mbbo, "HAI:tc1:5A:tune:type")
+{
+  field(DTYP, "stream")
+  #field(PINI, "YES")
+  field(DESC, "5A Tune type")
+  field(OUT,  "@PTC10.proto setTuneType(5A) PTC_ETH 0")
+  field(SDIS, "HAI:tc1:5A:ioType_RBV")
+  field(DISV, "0")
+  field(ZRVL, "0")
+  field(ZRST, "Cons")
+  field(ONVL, "1")
+  field(ONST, "Moderate")
+  field(TWVL, "2")
+  field(TWST, "Aggr")
+  field(THVL, "3")
+  field(THST, "Auto")
+  field(VAL,  "0")
+  field(FLNK, "HAI:tc1:5A:tune:type_RBV")
+}
+
+# Assume the channel name will not change, so don't poll it
+#field(LNK#, "HAI:tc1:5A:name_RBV")
+record(fanout, "HAI:tc1:5A:poll")
+{
+  field(DESC, "Update readback values")
+  field(SELM, "All")
+  field(LNK1, "HAI:tc1:5A:voltage_RBV")
+  field(LNK2, "HAI:tc1:5A:ioType_RBV")
+  field(LNK3, "HAI:tc1:5A:lowLimit_RBV")
+  field(LNK4, "HAI:tc1:5A:highLimit_RBV")
+  field(LNK5, "HAI:tc1:5A:setPoint_RBV")
+  field(LNK6, "HAI:tc1:5A:poll2")
+  field(SCAN, "Passive")
+}
+
+record(fanout, "HAI:tc1:5A:poll2")
+{
+  field(DESC, "Update readback values")
+  field(SELM, "All")
+  field(LNK1, "HAI:tc1:5A:rampRate_RBV")
+  field(LNK2, "HAI:tc1:5A:rampTemp_RBV")
+  field(LNK3, "HAI:tc1:5A:pid:P_RBV")
+  field(LNK4, "HAI:tc1:5A:pid:I_RBV")
+  field(LNK5, "HAI:tc1:5A:pid:D_RBV")
+  field(LNK6, "HAI:tc1:5A:poll3")
+  field(SCAN, "Passive")
+}
+
+record(fanout, "HAI:tc1:5A:poll3")
+{
+  field(DESC, "Update readback values")
+  field(SELM, "All")
+  field(LNK1, "HAI:tc1:5A:pid:mode_RBV")
+  field(LNK2, "HAI:tc1:5A:pid:input_RBV")
+  field(LNK3, "HAI:tc1:5A:tune:lag_RBV")
+  field(LNK4, "HAI:tc1:5A:tune:step_RBV")
+  field(LNK5, "HAI:tc1:5A:tune:mode_RBV")
+  field(LNK6, "HAI:tc1:5A:tune:type_RBV")
+  field(SCAN, "Passive")
+}
+# Database file for one channel of the SRS PTC10 Temperature Controller
+
+record(stringin, "HAI:tc1:5B:name_RBV") {
+  field(DTYP, "stream")
+  field(PINI, "YES")
+  field(DESC, "5B name rbv")
+  field(INP,  "@PTC10.proto getName(5B) PTC_ETH 0")
+}
+
+record(ai, "HAI:tc1:5B:voltage_RBV")
+{
+  field(DTYP, "stream")
+  field(DESC, "5B voltage")
+  field(INP,  "@PTC10.proto getOutputLevel(5B) PTC_ETH 0")
+  field(EGU,  "V")
+  field(PREC, "3")
+}
+
+# TODO: add some records to force RBV updates when ioType_RBV changes
+
+record(mbbi, "HAI:tc1:5B:ioType_RBV")
+{
+  field(DTYP, "stream")
+  field(PINI, "YES")
+  field(DESC, "5B IO type rbv")
+  field(INP,  "@PTC10.proto getIOtype(5B) PTC_ETH 0")
+  field(ZRVL, "0")
+  field(ZRST, "Input")
+  field(ONVL, "1")
+  field(ONST, "Set out")
+  field(TWVL, "2")
+  field(TWST, "Meas out")
+}
+
+record(mbbo, "HAI:tc1:5B:ioType")
+{
+  field(DTYP, "stream")
+  #field(PINI, "YES")
+  field(DESC, "5B IO type")
+  field(OUT,  "@PTC10.proto setIOtype(5B) PTC_ETH 0")
+  field(ZRVL, "0")
+  field(ZRST, "Input")
+  field(ONVL, "1")
+  field(ONST, "Set out")
+  field(TWVL, "2")
+  field(TWST, "Meas out")
+  field(FLNK, "HAI:tc1:5B:ioType_RBV")
+}
+
+record(bo, "HAI:tc1:5B:off")
+{
+  field(DTYP, "stream")
+  field(PINI, "NO")
+  field(DESC, "Turn 5B off")
+  field(OUT,  "@PTC10.proto setOff(5B) PTC_ETH 0")
+  field(ZNAM, "Done")
+  field(ONAM, "Off")
+  field(SDIS, "HAI:tc1:5B:ioType_RBV")
+  field(DISV, "0")
+  field(FLNK, "HAI:tc1:5B:pid:mode_RBV")
+}
+
+record(ai, "HAI:tc1:5B:lowLimit_RBV") {
+  field(DTYP, "stream")
+  field(PINI, "YES")
+  field(DESC, "5B Low limit rbv")
+  field(INP,  "@PTC10.proto getLowLimit(5B) PTC_ETH 0")
+  field(EGU,  "V")
+  field(SDIS, "HAI:tc1:5B:ioType_RBV")
+  field(DISV, "0")
+  field(PREC, "3")
+}
+
+record(ao, "HAI:tc1:5B:lowLimit") {
+  field(DTYP, "stream")
+  field(DESC, "5B Low limit")
+  field(OUT,  "@PTC10.proto setLowLimit(5B) PTC_ETH 0")
+  field(EGU,  "V")
+  field(SDIS, "HAI:tc1:5B:ioType_RBV")
+  field(DISV, "0")
+  field(FLNK, "HAI:tc1:5B:lowLimit_RBV")
+  field(PREC, "3")
+}
+
+record(ai, "HAI:tc1:5B:highLimit_RBV") {
+  field(DTYP, "stream")
+  field(PINI, "YES")
+  field(DESC, "5B High limit rbv")
+  field(INP,  "@PTC10.proto getHighLimit(5B) PTC_ETH 0")
+  field(EGU,  "V")
+  field(SDIS, "HAI:tc1:5B:ioType_RBV")
+  field(DISV, "0")
+  field(PREC, "3")
+}
+
+record(ao, "HAI:tc1:5B:highLimit") {
+  field(DTYP, "stream")
+  field(DESC, "5B High limit")
+  field(OUT,  "@PTC10.proto setHighLimit(5B) PTC_ETH 0")
+  field(EGU,  "V")
+  field(SDIS, "HAI:tc1:5B:ioType_RBV")
+  field(DISV, "0")
+  field(FLNK, "HAI:tc1:5B:highLimit_RBV")
+  field(PREC, "3")
+}
+
+record(ai, "HAI:tc1:5B:setPoint_RBV") {
+  field(DTYP, "stream")
+  field(PINI, "YES")
+  field(DESC, "5B Set Point rbv")
+  field(INP,  "@PTC10.proto getSetpoint(5B) PTC_ETH 0")
+  field(EGU,  "C")
+  field(SDIS, "HAI:tc1:5B:ioType_RBV")
+  field(DISV, "0")
+  field(PREC, "3")
+}
+
+record(ao, "HAI:tc1:5B:setPoint") {
+  field(DTYP, "stream")
+  field(DESC, "5B Set Point")
+  field(OUT,  "@PTC10.proto setSetpoint(5B) PTC_ETH 0")
+  field(EGU,  "C")
+  field(SDIS, "HAI:tc1:5B:ioType_RBV")
+  field(DISV, "0")
+  field(FLNK, "HAI:tc1:5B:setPoint_RBV")
+  field(PREC, "3")
+}
+
+record(ai, "HAI:tc1:5B:rampRate_RBV") {
+  field(DTYP, "stream")
+  field(PINI, "YES")
+  field(DESC, "5B Ramp Rate rbv")
+  field(INP,  "@PTC10.proto getRampRate(5B) PTC_ETH 0")
+  field(EGU,  "C/s")
+  field(SDIS, "HAI:tc1:5B:ioType_RBV")
+  field(DISV, "0")
+  field(PREC, "3")
+}
+
+record(ao, "HAI:tc1:5B:rampRate") {
+  field(DTYP, "stream")
+  field(DESC, "5B Ramp Rate")
+  field(OUT,  "@PTC10.proto setRampRate(5B) PTC_ETH 0")
+  field(EGU,  "C/s")
+  field(SDIS, "HAI:tc1:5B:ioType_RBV")
+  field(DISV, "0")
+  field(FLNK, "HAI:tc1:5B:rampRate_RBV")
+  field(PREC, "3")
+}
+
+record(ai, "HAI:tc1:5B:rampTemp_RBV") {
+  field(DTYP, "stream")
+  field(PINI, "YES")
+  field(DESC, "5B Ramp Temp rbv")
+  field(INP,  "@PTC10.proto getRampTemp(5B) PTC_ETH 0")
+  field(EGU,  "C")
+  field(SDIS, "HAI:tc1:5B:ioType_RBV")
+  field(DISV, "0")
+  field(PREC, "3")
+}
+
+record(ai, "HAI:tc1:5B:pid:P_RBV") {
+  field(DTYP, "stream")
+  field(PINI, "YES")
+  field(DESC, "5B PID P gain rbv")
+  field(INP,  "@PTC10.proto getPidP(5B) PTC_ETH 0")
+  field(SDIS, "HAI:tc1:5B:ioType_RBV")
+  field(DISV, "0")
+  field(PREC, "4")
+}
+
+record(ao, "HAI:tc1:5B:pid:P") {
+  field(DTYP, "stream")
+  field(DESC, "5B PID P gain")
+  field(OUT,  "@PTC10.proto setPidP(5B) PTC_ETH 0")
+  field(SDIS, "HAI:tc1:5B:ioType_RBV")
+  field(DISV, "0")
+  field(FLNK, "HAI:tc1:5B:pid:P_RBV")
+  field(PREC, "4")
+}
+
+record(ai, "HAI:tc1:5B:pid:I_RBV") {
+  field(DTYP, "stream")
+  field(PINI, "YES")
+  field(DESC, "5B PID I gain rbv")
+  field(INP,  "@PTC10.proto getPidI(5B) PTC_ETH 0")
+  field(SDIS, "HAI:tc1:5B:ioType_RBV")
+  field(DISV, "0")
+  field(PREC, "4")
+}
+
+record(ao, "HAI:tc1:5B:pid:I") {
+  field(DTYP, "stream")
+  field(DESC, "5B PID I gain")
+  field(OUT,  "@PTC10.proto setPidI(5B) PTC_ETH 0")
+  field(SDIS, "HAI:tc1:5B:ioType_RBV")
+  field(DISV, "0")
+  field(FLNK, "HAI:tc1:5B:pid:I_RBV")
+  field(PREC, "4")
+}
+
+record(ai, "HAI:tc1:5B:pid:D_RBV") {
+  field(DTYP, "stream")
+  field(PINI, "YES")
+  field(DESC, "5B PID D gain rbv")
+  field(INP,  "@PTC10.proto getPidD(5B) PTC_ETH 0")
+  field(SDIS, "HAI:tc1:5B:ioType_RBV")
+  field(DISV, "0")
+  field(PREC, "4")
+}
+
+record(ao, "HAI:tc1:5B:pid:D") {
+  field(DTYP, "stream")
+  field(DESC, "5B PID D gain")
+  field(OUT,  "@PTC10.proto setPidD(5B) PTC_ETH 0")
+  field(SDIS, "HAI:tc1:5B:ioType_RBV")
+  field(DISV, "0")
+  field(FLNK, "HAI:tc1:5B:pid:D_RBV")
+  field(PREC, "4")
+}
+
+record(stringin, "HAI:tc1:5B:pid:input_RBV") {
+  field(DTYP, "stream")
+  field(PINI, "YES")
+  field(DESC, "5B PID input rbv")
+  field(INP,  "@PTC10.proto getPidInput(5B) PTC_ETH 0")
+  field(SDIS, "HAI:tc1:5B:ioType_RBV")
+  field(DISV, "0")
+}
+
+record(stringout, "HAI:tc1:5B:pid:input") {
+  field(DTYP, "stream")
+  field(DESC, "5B PID input")
+  field(OUT,  "@PTC10.proto setPidInput(5B) PTC_ETH 0")
+  field(SDIS, "HAI:tc1:5B:ioType_RBV")
+  field(DISV, "0")
+  field(FLNK, "HAI:tc1:5B:pid:input_RBV")
+}
+
+record(bi, "HAI:tc1:5B:pid:mode_RBV")
+{
+  field(DTYP, "stream")
+  field(PINI, "YES")
+  field(DESC, "5B PID mode rbv")
+  field(INP,  "@PTC10.proto getPidMode(5B) PTC_ETH 0")
+  field(ZNAM, "Off")
+  field(ONAM, "On")
+  field(SDIS, "HAI:tc1:5B:ioType_RBV")
+  field(DISV, "0")
+}
+
+record(bo, "HAI:tc1:5B:pid:mode")
+{
+  field(DTYP, "stream")
+  #field(PINI, "YES")
+  field(DESC, "5B PID mode")
+  field(OUT,  "@PTC10.proto setPidMode(5B) PTC_ETH 0")
+  field(ZNAM, "Off")
+  field(ONAM, "On")
+  field(VAL,  "0")
+  field(SDIS, "HAI:tc1:5B:ioType_RBV")
+  field(DISV, "0")
+  field(FLNK, "HAI:tc1:5B:pid:mode_RBV")
+}
+
+record(ai, "HAI:tc1:5B:tune:lag_RBV") {
+  field(DTYP, "stream")
+  field(PINI, "YES")
+  field(DESC, "5B Tune lag")
+  field(INP,  "@PTC10.proto getTuneLag(5B) PTC_ETH 0")
+  field(SDIS, "HAI:tc1:5B:ioType_RBV")
+  field(DISV, "0")
+  field(PREC, "0")
+  field(EGU,  "seconds")
+}
+
+record(ao, "HAI:tc1:5B:tune:lag") {
+  field(DTYP, "stream")
+  field(DESC, "5B Tune lag")
+  field(OUT,  "@PTC10.proto setTuneLag(5B) PTC_ETH 0")
+  field(SDIS, "HAI:tc1:5B:ioType_RBV")
+  field(DISV, "0")
+  field(FLNK, "HAI:tc1:5B:tune:lag_RBV")
+  field(VAL,  "30")
+  field(PREC, "0")
+  field(EGU,  "seconds")
+}
+
+# 
+record(ai, "HAI:tc1:5B:tune:step_RBV") {
+  field(DTYP, "stream")
+  field(PINI, "YES")
+  field(DESC, "5B Tune step")
+  field(INP,  "@PTC10.proto getTuneStep(5B) PTC_ETH 0")
+  field(SDIS, "HAI:tc1:5B:ioType_RBV")
+  field(DISV, "0")
+  field(PREC, "3")
+  field(EGU,  "volts")
+}
+
+record(ao, "HAI:tc1:5B:tune:step") {
+  field(DTYP, "stream")
+  field(DESC, "5B Tune step")
+  field(OUT,  "@PTC10.proto setTuneStep(5B) PTC_ETH 0")
+  field(SDIS, "HAI:tc1:5B:ioType_RBV")
+  field(DISV, "0")
+  field(FLNK, "HAI:tc1:5B:tune:step_RBV")
+  field(PREC, "3")
+  field(VAL,  "0.5")
+  field(EGU,  "volts")
+}
+
+record(mbbi, "HAI:tc1:5B:tune:mode_RBV")
+{
+  field(DTYP, "stream")
+  field(PINI, "YES")
+  field(DESC, "5B Tune mode rbv")
+  field(INP,  "@PTC10.proto getTuneMode(5B) PTC_ETH 0")
+  field(SDIS, "HAI:tc1:5B:ioType_RBV")
+  field(DISV, "0")
+  field(ZRVL, "0")
+  field(ZRST, "Off")
+  field(ONVL, "1")
+  field(ONST, "Auto")
+  field(TWVL, "2")
+  field(TWST, "Step")
+  field(THVL, "3")
+  field(THST, "Relay")
+}
+
+record(mbbo, "HAI:tc1:5B:tune:mode")
+{
+  field(DTYP, "stream")
+  #field(PINI, "YES")
+  field(DESC, "5B Tune mode")
+  field(OUT,  "@PTC10.proto setTuneMode(5B) PTC_ETH 0")
+  field(SDIS, "HAI:tc1:5B:ioType_RBV")
+  field(DISV, "0")
+  field(ZRVL, "0")
+  field(ZRST, "Off")
+  field(ONVL, "1")
+  field(ONST, "Auto")
+  field(TWVL, "2")
+  field(TWST, "Step")
+  field(THVL, "3")
+  field(THST, "Relay")
+  field(VAL,  "0")
+  field(FLNK, "HAI:tc1:5B:tune:mode_RBV")
+}
+
+record(mbbi, "HAI:tc1:5B:tune:type_RBV")
+{
+  field(DTYP, "stream")
+  field(PINI, "YES")
+  field(DESC, "5B Tune type rbv")
+  field(INP,  "@PTC10.proto getTuneType(5B) PTC_ETH 0")
+  field(SDIS, "HAI:tc1:5B:ioType_RBV")
+  field(DISV, "0")
+  field(ZRVL, "0")
+  field(ZRST, "Cons")
+  field(ONVL, "1")
+  field(ONST, "Moderate")
+  field(TWVL, "2")
+  field(TWST, "Aggr")
+  field(THVL, "3")
+  field(THST, "Auto")
+}
+
+record(mbbo, "HAI:tc1:5B:tune:type")
+{
+  field(DTYP, "stream")
+  #field(PINI, "YES")
+  field(DESC, "5B Tune type")
+  field(OUT,  "@PTC10.proto setTuneType(5B) PTC_ETH 0")
+  field(SDIS, "HAI:tc1:5B:ioType_RBV")
+  field(DISV, "0")
+  field(ZRVL, "0")
+  field(ZRST, "Cons")
+  field(ONVL, "1")
+  field(ONST, "Moderate")
+  field(TWVL, "2")
+  field(TWST, "Aggr")
+  field(THVL, "3")
+  field(THST, "Auto")
+  field(VAL,  "0")
+  field(FLNK, "HAI:tc1:5B:tune:type_RBV")
+}
+
+# Assume the channel name will not change, so don't poll it
+#field(LNK#, "HAI:tc1:5B:name_RBV")
+record(fanout, "HAI:tc1:5B:poll")
+{
+  field(DESC, "Update readback values")
+  field(SELM, "All")
+  field(LNK1, "HAI:tc1:5B:voltage_RBV")
+  field(LNK2, "HAI:tc1:5B:ioType_RBV")
+  field(LNK3, "HAI:tc1:5B:lowLimit_RBV")
+  field(LNK4, "HAI:tc1:5B:highLimit_RBV")
+  field(LNK5, "HAI:tc1:5B:setPoint_RBV")
+  field(LNK6, "HAI:tc1:5B:poll2")
+  field(SCAN, "Passive")
+}
+
+record(fanout, "HAI:tc1:5B:poll2")
+{
+  field(DESC, "Update readback values")
+  field(SELM, "All")
+  field(LNK1, "HAI:tc1:5B:rampRate_RBV")
+  field(LNK2, "HAI:tc1:5B:rampTemp_RBV")
+  field(LNK3, "HAI:tc1:5B:pid:P_RBV")
+  field(LNK4, "HAI:tc1:5B:pid:I_RBV")
+  field(LNK5, "HAI:tc1:5B:pid:D_RBV")
+  field(LNK6, "HAI:tc1:5B:poll3")
+  field(SCAN, "Passive")
+}
+
+record(fanout, "HAI:tc1:5B:poll3")
+{
+  field(DESC, "Update readback values")
+  field(SELM, "All")
+  field(LNK1, "HAI:tc1:5B:pid:mode_RBV")
+  field(LNK2, "HAI:tc1:5B:pid:input_RBV")
+  field(LNK3, "HAI:tc1:5B:tune:lag_RBV")
+  field(LNK4, "HAI:tc1:5B:tune:step_RBV")
+  field(LNK5, "HAI:tc1:5B:tune:mode_RBV")
+  field(LNK6, "HAI:tc1:5B:tune:type_RBV")
+  field(SCAN, "Passive")
+}
+# Database file for one channel of the SRS PTC10 Temperature Controller
+
+record(stringin, "HAI:tc1:5C:name_RBV") {
+  field(DTYP, "stream")
+  field(PINI, "YES")
+  field(DESC, "5C name rbv")
+  field(INP,  "@PTC10.proto getName(5C) PTC_ETH 0")
+}
+
+record(ai, "HAI:tc1:5C:voltage_RBV")
+{
+  field(DTYP, "stream")
+  field(DESC, "5C voltage")
+  field(INP,  "@PTC10.proto getOutputLevel(5C) PTC_ETH 0")
+  field(EGU,  "V")
+  field(PREC, "3")
+}
+
+# TODO: add some records to force RBV updates when ioType_RBV changes
+
+record(mbbi, "HAI:tc1:5C:ioType_RBV")
+{
+  field(DTYP, "stream")
+  field(PINI, "YES")
+  field(DESC, "5C IO type rbv")
+  field(INP,  "@PTC10.proto getIOtype(5C) PTC_ETH 0")
+  field(ZRVL, "0")
+  field(ZRST, "Input")
+  field(ONVL, "1")
+  field(ONST, "Set out")
+  field(TWVL, "2")
+  field(TWST, "Meas out")
+}
+
+record(mbbo, "HAI:tc1:5C:ioType")
+{
+  field(DTYP, "stream")
+  #field(PINI, "YES")
+  field(DESC, "5C IO type")
+  field(OUT,  "@PTC10.proto setIOtype(5C) PTC_ETH 0")
+  field(ZRVL, "0")
+  field(ZRST, "Input")
+  field(ONVL, "1")
+  field(ONST, "Set out")
+  field(TWVL, "2")
+  field(TWST, "Meas out")
+  field(FLNK, "HAI:tc1:5C:ioType_RBV")
+}
+
+record(bo, "HAI:tc1:5C:off")
+{
+  field(DTYP, "stream")
+  field(PINI, "NO")
+  field(DESC, "Turn 5C off")
+  field(OUT,  "@PTC10.proto setOff(5C) PTC_ETH 0")
+  field(ZNAM, "Done")
+  field(ONAM, "Off")
+  field(SDIS, "HAI:tc1:5C:ioType_RBV")
+  field(DISV, "0")
+  field(FLNK, "HAI:tc1:5C:pid:mode_RBV")
+}
+
+record(ai, "HAI:tc1:5C:lowLimit_RBV") {
+  field(DTYP, "stream")
+  field(PINI, "YES")
+  field(DESC, "5C Low limit rbv")
+  field(INP,  "@PTC10.proto getLowLimit(5C) PTC_ETH 0")
+  field(EGU,  "V")
+  field(SDIS, "HAI:tc1:5C:ioType_RBV")
+  field(DISV, "0")
+  field(PREC, "3")
+}
+
+record(ao, "HAI:tc1:5C:lowLimit") {
+  field(DTYP, "stream")
+  field(DESC, "5C Low limit")
+  field(OUT,  "@PTC10.proto setLowLimit(5C) PTC_ETH 0")
+  field(EGU,  "V")
+  field(SDIS, "HAI:tc1:5C:ioType_RBV")
+  field(DISV, "0")
+  field(FLNK, "HAI:tc1:5C:lowLimit_RBV")
+  field(PREC, "3")
+}
+
+record(ai, "HAI:tc1:5C:highLimit_RBV") {
+  field(DTYP, "stream")
+  field(PINI, "YES")
+  field(DESC, "5C High limit rbv")
+  field(INP,  "@PTC10.proto getHighLimit(5C) PTC_ETH 0")
+  field(EGU,  "V")
+  field(SDIS, "HAI:tc1:5C:ioType_RBV")
+  field(DISV, "0")
+  field(PREC, "3")
+}
+
+record(ao, "HAI:tc1:5C:highLimit") {
+  field(DTYP, "stream")
+  field(DESC, "5C High limit")
+  field(OUT,  "@PTC10.proto setHighLimit(5C) PTC_ETH 0")
+  field(EGU,  "V")
+  field(SDIS, "HAI:tc1:5C:ioType_RBV")
+  field(DISV, "0")
+  field(FLNK, "HAI:tc1:5C:highLimit_RBV")
+  field(PREC, "3")
+}
+
+record(ai, "HAI:tc1:5C:setPoint_RBV") {
+  field(DTYP, "stream")
+  field(PINI, "YES")
+  field(DESC, "5C Set Point rbv")
+  field(INP,  "@PTC10.proto getSetpoint(5C) PTC_ETH 0")
+  field(EGU,  "C")
+  field(SDIS, "HAI:tc1:5C:ioType_RBV")
+  field(DISV, "0")
+  field(PREC, "3")
+}
+
+record(ao, "HAI:tc1:5C:setPoint") {
+  field(DTYP, "stream")
+  field(DESC, "5C Set Point")
+  field(OUT,  "@PTC10.proto setSetpoint(5C) PTC_ETH 0")
+  field(EGU,  "C")
+  field(SDIS, "HAI:tc1:5C:ioType_RBV")
+  field(DISV, "0")
+  field(FLNK, "HAI:tc1:5C:setPoint_RBV")
+  field(PREC, "3")
+}
+
+record(ai, "HAI:tc1:5C:rampRate_RBV") {
+  field(DTYP, "stream")
+  field(PINI, "YES")
+  field(DESC, "5C Ramp Rate rbv")
+  field(INP,  "@PTC10.proto getRampRate(5C) PTC_ETH 0")
+  field(EGU,  "C/s")
+  field(SDIS, "HAI:tc1:5C:ioType_RBV")
+  field(DISV, "0")
+  field(PREC, "3")
+}
+
+record(ao, "HAI:tc1:5C:rampRate") {
+  field(DTYP, "stream")
+  field(DESC, "5C Ramp Rate")
+  field(OUT,  "@PTC10.proto setRampRate(5C) PTC_ETH 0")
+  field(EGU,  "C/s")
+  field(SDIS, "HAI:tc1:5C:ioType_RBV")
+  field(DISV, "0")
+  field(FLNK, "HAI:tc1:5C:rampRate_RBV")
+  field(PREC, "3")
+}
+
+record(ai, "HAI:tc1:5C:rampTemp_RBV") {
+  field(DTYP, "stream")
+  field(PINI, "YES")
+  field(DESC, "5C Ramp Temp rbv")
+  field(INP,  "@PTC10.proto getRampTemp(5C) PTC_ETH 0")
+  field(EGU,  "C")
+  field(SDIS, "HAI:tc1:5C:ioType_RBV")
+  field(DISV, "0")
+  field(PREC, "3")
+}
+
+record(ai, "HAI:tc1:5C:pid:P_RBV") {
+  field(DTYP, "stream")
+  field(PINI, "YES")
+  field(DESC, "5C PID P gain rbv")
+  field(INP,  "@PTC10.proto getPidP(5C) PTC_ETH 0")
+  field(SDIS, "HAI:tc1:5C:ioType_RBV")
+  field(DISV, "0")
+  field(PREC, "4")
+}
+
+record(ao, "HAI:tc1:5C:pid:P") {
+  field(DTYP, "stream")
+  field(DESC, "5C PID P gain")
+  field(OUT,  "@PTC10.proto setPidP(5C) PTC_ETH 0")
+  field(SDIS, "HAI:tc1:5C:ioType_RBV")
+  field(DISV, "0")
+  field(FLNK, "HAI:tc1:5C:pid:P_RBV")
+  field(PREC, "4")
+}
+
+record(ai, "HAI:tc1:5C:pid:I_RBV") {
+  field(DTYP, "stream")
+  field(PINI, "YES")
+  field(DESC, "5C PID I gain rbv")
+  field(INP,  "@PTC10.proto getPidI(5C) PTC_ETH 0")
+  field(SDIS, "HAI:tc1:5C:ioType_RBV")
+  field(DISV, "0")
+  field(PREC, "4")
+}
+
+record(ao, "HAI:tc1:5C:pid:I") {
+  field(DTYP, "stream")
+  field(DESC, "5C PID I gain")
+  field(OUT,  "@PTC10.proto setPidI(5C) PTC_ETH 0")
+  field(SDIS, "HAI:tc1:5C:ioType_RBV")
+  field(DISV, "0")
+  field(FLNK, "HAI:tc1:5C:pid:I_RBV")
+  field(PREC, "4")
+}
+
+record(ai, "HAI:tc1:5C:pid:D_RBV") {
+  field(DTYP, "stream")
+  field(PINI, "YES")
+  field(DESC, "5C PID D gain rbv")
+  field(INP,  "@PTC10.proto getPidD(5C) PTC_ETH 0")
+  field(SDIS, "HAI:tc1:5C:ioType_RBV")
+  field(DISV, "0")
+  field(PREC, "4")
+}
+
+record(ao, "HAI:tc1:5C:pid:D") {
+  field(DTYP, "stream")
+  field(DESC, "5C PID D gain")
+  field(OUT,  "@PTC10.proto setPidD(5C) PTC_ETH 0")
+  field(SDIS, "HAI:tc1:5C:ioType_RBV")
+  field(DISV, "0")
+  field(FLNK, "HAI:tc1:5C:pid:D_RBV")
+  field(PREC, "4")
+}
+
+record(stringin, "HAI:tc1:5C:pid:input_RBV") {
+  field(DTYP, "stream")
+  field(PINI, "YES")
+  field(DESC, "5C PID input rbv")
+  field(INP,  "@PTC10.proto getPidInput(5C) PTC_ETH 0")
+  field(SDIS, "HAI:tc1:5C:ioType_RBV")
+  field(DISV, "0")
+}
+
+record(stringout, "HAI:tc1:5C:pid:input") {
+  field(DTYP, "stream")
+  field(DESC, "5C PID input")
+  field(OUT,  "@PTC10.proto setPidInput(5C) PTC_ETH 0")
+  field(SDIS, "HAI:tc1:5C:ioType_RBV")
+  field(DISV, "0")
+  field(FLNK, "HAI:tc1:5C:pid:input_RBV")
+}
+
+record(bi, "HAI:tc1:5C:pid:mode_RBV")
+{
+  field(DTYP, "stream")
+  field(PINI, "YES")
+  field(DESC, "5C PID mode rbv")
+  field(INP,  "@PTC10.proto getPidMode(5C) PTC_ETH 0")
+  field(ZNAM, "Off")
+  field(ONAM, "On")
+  field(SDIS, "HAI:tc1:5C:ioType_RBV")
+  field(DISV, "0")
+}
+
+record(bo, "HAI:tc1:5C:pid:mode")
+{
+  field(DTYP, "stream")
+  #field(PINI, "YES")
+  field(DESC, "5C PID mode")
+  field(OUT,  "@PTC10.proto setPidMode(5C) PTC_ETH 0")
+  field(ZNAM, "Off")
+  field(ONAM, "On")
+  field(VAL,  "0")
+  field(SDIS, "HAI:tc1:5C:ioType_RBV")
+  field(DISV, "0")
+  field(FLNK, "HAI:tc1:5C:pid:mode_RBV")
+}
+
+record(ai, "HAI:tc1:5C:tune:lag_RBV") {
+  field(DTYP, "stream")
+  field(PINI, "YES")
+  field(DESC, "5C Tune lag")
+  field(INP,  "@PTC10.proto getTuneLag(5C) PTC_ETH 0")
+  field(SDIS, "HAI:tc1:5C:ioType_RBV")
+  field(DISV, "0")
+  field(PREC, "0")
+  field(EGU,  "seconds")
+}
+
+record(ao, "HAI:tc1:5C:tune:lag") {
+  field(DTYP, "stream")
+  field(DESC, "5C Tune lag")
+  field(OUT,  "@PTC10.proto setTuneLag(5C) PTC_ETH 0")
+  field(SDIS, "HAI:tc1:5C:ioType_RBV")
+  field(DISV, "0")
+  field(FLNK, "HAI:tc1:5C:tune:lag_RBV")
+  field(VAL,  "30")
+  field(PREC, "0")
+  field(EGU,  "seconds")
+}
+
+# 
+record(ai, "HAI:tc1:5C:tune:step_RBV") {
+  field(DTYP, "stream")
+  field(PINI, "YES")
+  field(DESC, "5C Tune step")
+  field(INP,  "@PTC10.proto getTuneStep(5C) PTC_ETH 0")
+  field(SDIS, "HAI:tc1:5C:ioType_RBV")
+  field(DISV, "0")
+  field(PREC, "3")
+  field(EGU,  "volts")
+}
+
+record(ao, "HAI:tc1:5C:tune:step") {
+  field(DTYP, "stream")
+  field(DESC, "5C Tune step")
+  field(OUT,  "@PTC10.proto setTuneStep(5C) PTC_ETH 0")
+  field(SDIS, "HAI:tc1:5C:ioType_RBV")
+  field(DISV, "0")
+  field(FLNK, "HAI:tc1:5C:tune:step_RBV")
+  field(PREC, "3")
+  field(VAL,  "0.5")
+  field(EGU,  "volts")
+}
+
+record(mbbi, "HAI:tc1:5C:tune:mode_RBV")
+{
+  field(DTYP, "stream")
+  field(PINI, "YES")
+  field(DESC, "5C Tune mode rbv")
+  field(INP,  "@PTC10.proto getTuneMode(5C) PTC_ETH 0")
+  field(SDIS, "HAI:tc1:5C:ioType_RBV")
+  field(DISV, "0")
+  field(ZRVL, "0")
+  field(ZRST, "Off")
+  field(ONVL, "1")
+  field(ONST, "Auto")
+  field(TWVL, "2")
+  field(TWST, "Step")
+  field(THVL, "3")
+  field(THST, "Relay")
+}
+
+record(mbbo, "HAI:tc1:5C:tune:mode")
+{
+  field(DTYP, "stream")
+  #field(PINI, "YES")
+  field(DESC, "5C Tune mode")
+  field(OUT,  "@PTC10.proto setTuneMode(5C) PTC_ETH 0")
+  field(SDIS, "HAI:tc1:5C:ioType_RBV")
+  field(DISV, "0")
+  field(ZRVL, "0")
+  field(ZRST, "Off")
+  field(ONVL, "1")
+  field(ONST, "Auto")
+  field(TWVL, "2")
+  field(TWST, "Step")
+  field(THVL, "3")
+  field(THST, "Relay")
+  field(VAL,  "0")
+  field(FLNK, "HAI:tc1:5C:tune:mode_RBV")
+}
+
+record(mbbi, "HAI:tc1:5C:tune:type_RBV")
+{
+  field(DTYP, "stream")
+  field(PINI, "YES")
+  field(DESC, "5C Tune type rbv")
+  field(INP,  "@PTC10.proto getTuneType(5C) PTC_ETH 0")
+  field(SDIS, "HAI:tc1:5C:ioType_RBV")
+  field(DISV, "0")
+  field(ZRVL, "0")
+  field(ZRST, "Cons")
+  field(ONVL, "1")
+  field(ONST, "Moderate")
+  field(TWVL, "2")
+  field(TWST, "Aggr")
+  field(THVL, "3")
+  field(THST, "Auto")
+}
+
+record(mbbo, "HAI:tc1:5C:tune:type")
+{
+  field(DTYP, "stream")
+  #field(PINI, "YES")
+  field(DESC, "5C Tune type")
+  field(OUT,  "@PTC10.proto setTuneType(5C) PTC_ETH 0")
+  field(SDIS, "HAI:tc1:5C:ioType_RBV")
+  field(DISV, "0")
+  field(ZRVL, "0")
+  field(ZRST, "Cons")
+  field(ONVL, "1")
+  field(ONST, "Moderate")
+  field(TWVL, "2")
+  field(TWST, "Aggr")
+  field(THVL, "3")
+  field(THST, "Auto")
+  field(VAL,  "0")
+  field(FLNK, "HAI:tc1:5C:tune:type_RBV")
+}
+
+# Assume the channel name will not change, so don't poll it
+#field(LNK#, "HAI:tc1:5C:name_RBV")
+record(fanout, "HAI:tc1:5C:poll")
+{
+  field(DESC, "Update readback values")
+  field(SELM, "All")
+  field(LNK1, "HAI:tc1:5C:voltage_RBV")
+  field(LNK2, "HAI:tc1:5C:ioType_RBV")
+  field(LNK3, "HAI:tc1:5C:lowLimit_RBV")
+  field(LNK4, "HAI:tc1:5C:highLimit_RBV")
+  field(LNK5, "HAI:tc1:5C:setPoint_RBV")
+  field(LNK6, "HAI:tc1:5C:poll2")
+  field(SCAN, "Passive")
+}
+
+record(fanout, "HAI:tc1:5C:poll2")
+{
+  field(DESC, "Update readback values")
+  field(SELM, "All")
+  field(LNK1, "HAI:tc1:5C:rampRate_RBV")
+  field(LNK2, "HAI:tc1:5C:rampTemp_RBV")
+  field(LNK3, "HAI:tc1:5C:pid:P_RBV")
+  field(LNK4, "HAI:tc1:5C:pid:I_RBV")
+  field(LNK5, "HAI:tc1:5C:pid:D_RBV")
+  field(LNK6, "HAI:tc1:5C:poll3")
+  field(SCAN, "Passive")
+}
+
+record(fanout, "HAI:tc1:5C:poll3")
+{
+  field(DESC, "Update readback values")
+  field(SELM, "All")
+  field(LNK1, "HAI:tc1:5C:pid:mode_RBV")
+  field(LNK2, "HAI:tc1:5C:pid:input_RBV")
+  field(LNK3, "HAI:tc1:5C:tune:lag_RBV")
+  field(LNK4, "HAI:tc1:5C:tune:step_RBV")
+  field(LNK5, "HAI:tc1:5C:tune:mode_RBV")
+  field(LNK6, "HAI:tc1:5C:tune:type_RBV")
+  field(SCAN, "Passive")
+}
+# Database file for one channel of the SRS PTC10 Temperature Controller
+
+record(stringin, "HAI:tc1:5D:name_RBV") {
+  field(DTYP, "stream")
+  field(PINI, "YES")
+  field(DESC, "5D name rbv")
+  field(INP,  "@PTC10.proto getName(5D) PTC_ETH 0")
+}
+
+record(ai, "HAI:tc1:5D:voltage_RBV")
+{
+  field(DTYP, "stream")
+  field(DESC, "5D voltage")
+  field(INP,  "@PTC10.proto getOutputLevel(5D) PTC_ETH 0")
+  field(EGU,  "V")
+  field(PREC, "3")
+}
+
+# TODO: add some records to force RBV updates when ioType_RBV changes
+
+record(mbbi, "HAI:tc1:5D:ioType_RBV")
+{
+  field(DTYP, "stream")
+  field(PINI, "YES")
+  field(DESC, "5D IO type rbv")
+  field(INP,  "@PTC10.proto getIOtype(5D) PTC_ETH 0")
+  field(ZRVL, "0")
+  field(ZRST, "Input")
+  field(ONVL, "1")
+  field(ONST, "Set out")
+  field(TWVL, "2")
+  field(TWST, "Meas out")
+}
+
+record(mbbo, "HAI:tc1:5D:ioType")
+{
+  field(DTYP, "stream")
+  #field(PINI, "YES")
+  field(DESC, "5D IO type")
+  field(OUT,  "@PTC10.proto setIOtype(5D) PTC_ETH 0")
+  field(ZRVL, "0")
+  field(ZRST, "Input")
+  field(ONVL, "1")
+  field(ONST, "Set out")
+  field(TWVL, "2")
+  field(TWST, "Meas out")
+  field(FLNK, "HAI:tc1:5D:ioType_RBV")
+}
+
+record(bo, "HAI:tc1:5D:off")
+{
+  field(DTYP, "stream")
+  field(PINI, "NO")
+  field(DESC, "Turn 5D off")
+  field(OUT,  "@PTC10.proto setOff(5D) PTC_ETH 0")
+  field(ZNAM, "Done")
+  field(ONAM, "Off")
+  field(SDIS, "HAI:tc1:5D:ioType_RBV")
+  field(DISV, "0")
+  field(FLNK, "HAI:tc1:5D:pid:mode_RBV")
+}
+
+record(ai, "HAI:tc1:5D:lowLimit_RBV") {
+  field(DTYP, "stream")
+  field(PINI, "YES")
+  field(DESC, "5D Low limit rbv")
+  field(INP,  "@PTC10.proto getLowLimit(5D) PTC_ETH 0")
+  field(EGU,  "V")
+  field(SDIS, "HAI:tc1:5D:ioType_RBV")
+  field(DISV, "0")
+  field(PREC, "3")
+}
+
+record(ao, "HAI:tc1:5D:lowLimit") {
+  field(DTYP, "stream")
+  field(DESC, "5D Low limit")
+  field(OUT,  "@PTC10.proto setLowLimit(5D) PTC_ETH 0")
+  field(EGU,  "V")
+  field(SDIS, "HAI:tc1:5D:ioType_RBV")
+  field(DISV, "0")
+  field(FLNK, "HAI:tc1:5D:lowLimit_RBV")
+  field(PREC, "3")
+}
+
+record(ai, "HAI:tc1:5D:highLimit_RBV") {
+  field(DTYP, "stream")
+  field(PINI, "YES")
+  field(DESC, "5D High limit rbv")
+  field(INP,  "@PTC10.proto getHighLimit(5D) PTC_ETH 0")
+  field(EGU,  "V")
+  field(SDIS, "HAI:tc1:5D:ioType_RBV")
+  field(DISV, "0")
+  field(PREC, "3")
+}
+
+record(ao, "HAI:tc1:5D:highLimit") {
+  field(DTYP, "stream")
+  field(DESC, "5D High limit")
+  field(OUT,  "@PTC10.proto setHighLimit(5D) PTC_ETH 0")
+  field(EGU,  "V")
+  field(SDIS, "HAI:tc1:5D:ioType_RBV")
+  field(DISV, "0")
+  field(FLNK, "HAI:tc1:5D:highLimit_RBV")
+  field(PREC, "3")
+}
+
+record(ai, "HAI:tc1:5D:setPoint_RBV") {
+  field(DTYP, "stream")
+  field(PINI, "YES")
+  field(DESC, "5D Set Point rbv")
+  field(INP,  "@PTC10.proto getSetpoint(5D) PTC_ETH 0")
+  field(EGU,  "C")
+  field(SDIS, "HAI:tc1:5D:ioType_RBV")
+  field(DISV, "0")
+  field(PREC, "3")
+}
+
+record(ao, "HAI:tc1:5D:setPoint") {
+  field(DTYP, "stream")
+  field(DESC, "5D Set Point")
+  field(OUT,  "@PTC10.proto setSetpoint(5D) PTC_ETH 0")
+  field(EGU,  "C")
+  field(SDIS, "HAI:tc1:5D:ioType_RBV")
+  field(DISV, "0")
+  field(FLNK, "HAI:tc1:5D:setPoint_RBV")
+  field(PREC, "3")
+}
+
+record(ai, "HAI:tc1:5D:rampRate_RBV") {
+  field(DTYP, "stream")
+  field(PINI, "YES")
+  field(DESC, "5D Ramp Rate rbv")
+  field(INP,  "@PTC10.proto getRampRate(5D) PTC_ETH 0")
+  field(EGU,  "C/s")
+  field(SDIS, "HAI:tc1:5D:ioType_RBV")
+  field(DISV, "0")
+  field(PREC, "3")
+}
+
+record(ao, "HAI:tc1:5D:rampRate") {
+  field(DTYP, "stream")
+  field(DESC, "5D Ramp Rate")
+  field(OUT,  "@PTC10.proto setRampRate(5D) PTC_ETH 0")
+  field(EGU,  "C/s")
+  field(SDIS, "HAI:tc1:5D:ioType_RBV")
+  field(DISV, "0")
+  field(FLNK, "HAI:tc1:5D:rampRate_RBV")
+  field(PREC, "3")
+}
+
+record(ai, "HAI:tc1:5D:rampTemp_RBV") {
+  field(DTYP, "stream")
+  field(PINI, "YES")
+  field(DESC, "5D Ramp Temp rbv")
+  field(INP,  "@PTC10.proto getRampTemp(5D) PTC_ETH 0")
+  field(EGU,  "C")
+  field(SDIS, "HAI:tc1:5D:ioType_RBV")
+  field(DISV, "0")
+  field(PREC, "3")
+}
+
+record(ai, "HAI:tc1:5D:pid:P_RBV") {
+  field(DTYP, "stream")
+  field(PINI, "YES")
+  field(DESC, "5D PID P gain rbv")
+  field(INP,  "@PTC10.proto getPidP(5D) PTC_ETH 0")
+  field(SDIS, "HAI:tc1:5D:ioType_RBV")
+  field(DISV, "0")
+  field(PREC, "4")
+}
+
+record(ao, "HAI:tc1:5D:pid:P") {
+  field(DTYP, "stream")
+  field(DESC, "5D PID P gain")
+  field(OUT,  "@PTC10.proto setPidP(5D) PTC_ETH 0")
+  field(SDIS, "HAI:tc1:5D:ioType_RBV")
+  field(DISV, "0")
+  field(FLNK, "HAI:tc1:5D:pid:P_RBV")
+  field(PREC, "4")
+}
+
+record(ai, "HAI:tc1:5D:pid:I_RBV") {
+  field(DTYP, "stream")
+  field(PINI, "YES")
+  field(DESC, "5D PID I gain rbv")
+  field(INP,  "@PTC10.proto getPidI(5D) PTC_ETH 0")
+  field(SDIS, "HAI:tc1:5D:ioType_RBV")
+  field(DISV, "0")
+  field(PREC, "4")
+}
+
+record(ao, "HAI:tc1:5D:pid:I") {
+  field(DTYP, "stream")
+  field(DESC, "5D PID I gain")
+  field(OUT,  "@PTC10.proto setPidI(5D) PTC_ETH 0")
+  field(SDIS, "HAI:tc1:5D:ioType_RBV")
+  field(DISV, "0")
+  field(FLNK, "HAI:tc1:5D:pid:I_RBV")
+  field(PREC, "4")
+}
+
+record(ai, "HAI:tc1:5D:pid:D_RBV") {
+  field(DTYP, "stream")
+  field(PINI, "YES")
+  field(DESC, "5D PID D gain rbv")
+  field(INP,  "@PTC10.proto getPidD(5D) PTC_ETH 0")
+  field(SDIS, "HAI:tc1:5D:ioType_RBV")
+  field(DISV, "0")
+  field(PREC, "4")
+}
+
+record(ao, "HAI:tc1:5D:pid:D") {
+  field(DTYP, "stream")
+  field(DESC, "5D PID D gain")
+  field(OUT,  "@PTC10.proto setPidD(5D) PTC_ETH 0")
+  field(SDIS, "HAI:tc1:5D:ioType_RBV")
+  field(DISV, "0")
+  field(FLNK, "HAI:tc1:5D:pid:D_RBV")
+  field(PREC, "4")
+}
+
+record(stringin, "HAI:tc1:5D:pid:input_RBV") {
+  field(DTYP, "stream")
+  field(PINI, "YES")
+  field(DESC, "5D PID input rbv")
+  field(INP,  "@PTC10.proto getPidInput(5D) PTC_ETH 0")
+  field(SDIS, "HAI:tc1:5D:ioType_RBV")
+  field(DISV, "0")
+}
+
+record(stringout, "HAI:tc1:5D:pid:input") {
+  field(DTYP, "stream")
+  field(DESC, "5D PID input")
+  field(OUT,  "@PTC10.proto setPidInput(5D) PTC_ETH 0")
+  field(SDIS, "HAI:tc1:5D:ioType_RBV")
+  field(DISV, "0")
+  field(FLNK, "HAI:tc1:5D:pid:input_RBV")
+}
+
+record(bi, "HAI:tc1:5D:pid:mode_RBV")
+{
+  field(DTYP, "stream")
+  field(PINI, "YES")
+  field(DESC, "5D PID mode rbv")
+  field(INP,  "@PTC10.proto getPidMode(5D) PTC_ETH 0")
+  field(ZNAM, "Off")
+  field(ONAM, "On")
+  field(SDIS, "HAI:tc1:5D:ioType_RBV")
+  field(DISV, "0")
+}
+
+record(bo, "HAI:tc1:5D:pid:mode")
+{
+  field(DTYP, "stream")
+  #field(PINI, "YES")
+  field(DESC, "5D PID mode")
+  field(OUT,  "@PTC10.proto setPidMode(5D) PTC_ETH 0")
+  field(ZNAM, "Off")
+  field(ONAM, "On")
+  field(VAL,  "0")
+  field(SDIS, "HAI:tc1:5D:ioType_RBV")
+  field(DISV, "0")
+  field(FLNK, "HAI:tc1:5D:pid:mode_RBV")
+}
+
+record(ai, "HAI:tc1:5D:tune:lag_RBV") {
+  field(DTYP, "stream")
+  field(PINI, "YES")
+  field(DESC, "5D Tune lag")
+  field(INP,  "@PTC10.proto getTuneLag(5D) PTC_ETH 0")
+  field(SDIS, "HAI:tc1:5D:ioType_RBV")
+  field(DISV, "0")
+  field(PREC, "0")
+  field(EGU,  "seconds")
+}
+
+record(ao, "HAI:tc1:5D:tune:lag") {
+  field(DTYP, "stream")
+  field(DESC, "5D Tune lag")
+  field(OUT,  "@PTC10.proto setTuneLag(5D) PTC_ETH 0")
+  field(SDIS, "HAI:tc1:5D:ioType_RBV")
+  field(DISV, "0")
+  field(FLNK, "HAI:tc1:5D:tune:lag_RBV")
+  field(VAL,  "30")
+  field(PREC, "0")
+  field(EGU,  "seconds")
+}
+
+# 
+record(ai, "HAI:tc1:5D:tune:step_RBV") {
+  field(DTYP, "stream")
+  field(PINI, "YES")
+  field(DESC, "5D Tune step")
+  field(INP,  "@PTC10.proto getTuneStep(5D) PTC_ETH 0")
+  field(SDIS, "HAI:tc1:5D:ioType_RBV")
+  field(DISV, "0")
+  field(PREC, "3")
+  field(EGU,  "volts")
+}
+
+record(ao, "HAI:tc1:5D:tune:step") {
+  field(DTYP, "stream")
+  field(DESC, "5D Tune step")
+  field(OUT,  "@PTC10.proto setTuneStep(5D) PTC_ETH 0")
+  field(SDIS, "HAI:tc1:5D:ioType_RBV")
+  field(DISV, "0")
+  field(FLNK, "HAI:tc1:5D:tune:step_RBV")
+  field(PREC, "3")
+  field(VAL,  "0.5")
+  field(EGU,  "volts")
+}
+
+record(mbbi, "HAI:tc1:5D:tune:mode_RBV")
+{
+  field(DTYP, "stream")
+  field(PINI, "YES")
+  field(DESC, "5D Tune mode rbv")
+  field(INP,  "@PTC10.proto getTuneMode(5D) PTC_ETH 0")
+  field(SDIS, "HAI:tc1:5D:ioType_RBV")
+  field(DISV, "0")
+  field(ZRVL, "0")
+  field(ZRST, "Off")
+  field(ONVL, "1")
+  field(ONST, "Auto")
+  field(TWVL, "2")
+  field(TWST, "Step")
+  field(THVL, "3")
+  field(THST, "Relay")
+}
+
+record(mbbo, "HAI:tc1:5D:tune:mode")
+{
+  field(DTYP, "stream")
+  #field(PINI, "YES")
+  field(DESC, "5D Tune mode")
+  field(OUT,  "@PTC10.proto setTuneMode(5D) PTC_ETH 0")
+  field(SDIS, "HAI:tc1:5D:ioType_RBV")
+  field(DISV, "0")
+  field(ZRVL, "0")
+  field(ZRST, "Off")
+  field(ONVL, "1")
+  field(ONST, "Auto")
+  field(TWVL, "2")
+  field(TWST, "Step")
+  field(THVL, "3")
+  field(THST, "Relay")
+  field(VAL,  "0")
+  field(FLNK, "HAI:tc1:5D:tune:mode_RBV")
+}
+
+record(mbbi, "HAI:tc1:5D:tune:type_RBV")
+{
+  field(DTYP, "stream")
+  field(PINI, "YES")
+  field(DESC, "5D Tune type rbv")
+  field(INP,  "@PTC10.proto getTuneType(5D) PTC_ETH 0")
+  field(SDIS, "HAI:tc1:5D:ioType_RBV")
+  field(DISV, "0")
+  field(ZRVL, "0")
+  field(ZRST, "Cons")
+  field(ONVL, "1")
+  field(ONST, "Moderate")
+  field(TWVL, "2")
+  field(TWST, "Aggr")
+  field(THVL, "3")
+  field(THST, "Auto")
+}
+
+record(mbbo, "HAI:tc1:5D:tune:type")
+{
+  field(DTYP, "stream")
+  #field(PINI, "YES")
+  field(DESC, "5D Tune type")
+  field(OUT,  "@PTC10.proto setTuneType(5D) PTC_ETH 0")
+  field(SDIS, "HAI:tc1:5D:ioType_RBV")
+  field(DISV, "0")
+  field(ZRVL, "0")
+  field(ZRST, "Cons")
+  field(ONVL, "1")
+  field(ONST, "Moderate")
+  field(TWVL, "2")
+  field(TWST, "Aggr")
+  field(THVL, "3")
+  field(THST, "Auto")
+  field(VAL,  "0")
+  field(FLNK, "HAI:tc1:5D:tune:type_RBV")
+}
+
+# Assume the channel name will not change, so don't poll it
+#field(LNK#, "HAI:tc1:5D:name_RBV")
+record(fanout, "HAI:tc1:5D:poll")
+{
+  field(DESC, "Update readback values")
+  field(SELM, "All")
+  field(LNK1, "HAI:tc1:5D:voltage_RBV")
+  field(LNK2, "HAI:tc1:5D:ioType_RBV")
+  field(LNK3, "HAI:tc1:5D:lowLimit_RBV")
+  field(LNK4, "HAI:tc1:5D:highLimit_RBV")
+  field(LNK5, "HAI:tc1:5D:setPoint_RBV")
+  field(LNK6, "HAI:tc1:5D:poll2")
+  field(SCAN, "Passive")
+}
+
+record(fanout, "HAI:tc1:5D:poll2")
+{
+  field(DESC, "Update readback values")
+  field(SELM, "All")
+  field(LNK1, "HAI:tc1:5D:rampRate_RBV")
+  field(LNK2, "HAI:tc1:5D:rampTemp_RBV")
+  field(LNK3, "HAI:tc1:5D:pid:P_RBV")
+  field(LNK4, "HAI:tc1:5D:pid:I_RBV")
+  field(LNK5, "HAI:tc1:5D:pid:D_RBV")
+  field(LNK6, "HAI:tc1:5D:poll3")
+  field(SCAN, "Passive")
+}
+
+record(fanout, "HAI:tc1:5D:poll3")
+{
+  field(DESC, "Update readback values")
+  field(SELM, "All")
+  field(LNK1, "HAI:tc1:5D:pid:mode_RBV")
+  field(LNK2, "HAI:tc1:5D:pid:input_RBV")
+  field(LNK3, "HAI:tc1:5D:tune:lag_RBV")
+  field(LNK4, "HAI:tc1:5D:tune:step_RBV")
+  field(LNK5, "HAI:tc1:5D:tune:mode_RBV")
+  field(LNK6, "HAI:tc1:5D:tune:type_RBV")
+  field(SCAN, "Passive")
+}

@@ -1,0 +1,215 @@
+# Protocol file for the SRS PTC10 Temperature Controller
+
+OutTerminator = CR LF;
+InTerminator = CR LF;
+
+### Channel functions
+
+#
+getName {
+  out "\$1.Name?";
+  in "%s";
+}
+
+# OutputLevel (for an output channel) or temperature (for an input channel)
+getOutputLevel {
+  out "\$1?";
+  in "%f";
+}
+
+# IO type applies to Analog IO channels
+getIOtype {
+  out "\$1.IOtype?";
+  in "%{Input|Set out|Meas out}";
+}
+
+# IO type applies to Analog IO channels
+setIOtype {
+  out "\$1.IOtype %{Input|\"Set out\"|\"Meas out\"}";
+}
+
+
+# Off mode applies to output channels
+# it cancels autotuning, turns PID off, and sets output to zero or low limit
+setOff {
+  out "\$1.off";
+}
+
+# Low limit applies to output channels
+getLowLimit {
+  out "\$1.Lowlmt?";
+  in "%f";
+}
+
+# Low limit applies to output channels
+setLowLimit {
+  out "\$1.Lowlmt %f";
+}
+
+# High limit applies to output channels
+getHighLimit {
+  out "\$1.Hilmt?";
+  in "%f";
+}
+
+# High limit applies to output channels
+setHighLimit {
+  out "\$1.Hilmt %f";
+}
+
+# Set point applies to Analog IO channels
+getSetpoint {
+  out "\$1.pid.Setpoint?";
+  in "%f";
+}
+
+# Set point applies to Analog IO channels
+setSetpoint {
+  out "\$1.pid.Setpoint %f";
+}
+
+# Ramp rate applies to Analog IO channels
+getRampRate {
+  out "\$1.pid.Ramp?";
+  in "%f";
+}
+
+# Ramp rate applies to Analog IO channels
+setRampRate {
+  out "\$1.pid.Ramp %f";
+}
+
+# Ramp temp applies to Analog IO channels
+getRampTemp {
+  out "\$1.pid.RampT?";
+  in "%f";
+}
+
+# PID Proportional gain applies to Analog IO channels
+getPidP {
+  out "\$1.pid.P?";
+  in "%f";
+}
+
+# PID Proportional gain applies to Analog IO channels
+setPidP {
+  out "\$1.pid.P %f";
+}
+
+# PID Integral gain applies to Analog IO channels
+getPidI {
+  out "\$1.pid.I?";
+  in "%f";
+}
+
+# PID Derivative gain applies to Analog IO channels
+setPidI {
+  out "\$1.pid.I %f";
+}
+
+# PID Derivative gain applies to Analog IO channels
+getPidD {
+  out "\$1.pid.D?";
+  in "%f";
+}
+
+# PID Derivative gain applies to Analog IO channels
+setPidD {
+  out "\$1.pid.D %f";
+}
+
+# PID Input applies to Analog IO channels
+getPidInput {
+  out "\$1.pid.input?";
+  in "%s";
+}
+
+# PID Input applies to Analog IO channels
+setPidInput {
+  out "\$1.pid.input %s";
+}
+
+# PID mode applies to Analog IO channels
+getPidMode {
+  out "\$1.pid.Mode?";
+  in "%{Off|On}";
+}
+
+# PID mode applies to Analog IO channels
+setPidMode {
+  out "\$1.pid.Mode %{Off|On}";
+}
+
+# lag is an integer
+getTuneLag {
+  out "\$1.tune.Lag?";
+  in "%f";
+}
+
+# 
+setTuneLag {
+  out "\$1.tune.Lag %f";
+}
+
+# 
+getTuneStep {
+  out "\$1.tune.StepY?";
+  in "%f";
+}
+
+# 
+setTuneStep {
+  out "\$1.tune.StepY %f";
+}
+
+# 
+getTuneMode {
+  out "\$1.tune.Mode?";
+  in "%{Off|Auto|Step|Relay}";
+}
+
+# 
+setTuneMode {
+  out "\$1.tune.Mode %{Off|Auto|Step|Relay}";
+}
+
+# 
+getTuneType {
+  out "\$1.tune.Type?";
+  in "%{Cons|Moderate|Aggr|Auto}";
+}
+
+# 
+setTuneType {
+  out "\$1.tune.Type %{Cons|Moderate|Aggr|Auto}";
+}
+
+### Controller functions
+
+setOutputEnable  {
+  out "outputEnable %{Off|On}";
+}
+
+getOutputEnable {
+  out "outputEnable?";
+  in "%{Off|On}";
+}
+
+getOutputNames {
+  out "getOutput.names?";
+  in "";
+}
+
+getOutputUnits {
+  out "getOutput.units?";
+  in "";
+}
+
+getOutput {
+  out "getOutput?";
+  in "";
+}
+
+readoutInitial {
+  out "system.com.verbose medium";
+}
